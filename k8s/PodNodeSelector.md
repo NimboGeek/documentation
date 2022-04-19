@@ -1,25 +1,27 @@
 ---
 marp: true
 ---
-<!-- theme: gaia -->
-<!-- _class: lead -->
-<!-- paginate: true -->
-<!-- backgroundColor: #fff -->
-<!-- backgroundImage: url('https://marp.app/assets/hero-background.svg') -->
+<!-- #theme: uncover  -->
+<!-- theme: gaia  -->
+<!-- _class: [lead, invert] -->
 <!-- headingDivider: 2 -->
+<!-- paginate: true -->
+<!-- _paginate: false -->
 
-# Namespaced pod selector
+# Namespaced node selector <!--fit-->
 
 Jérôme Narbonne
 
 ## Prepare the cluster
+<!-- #backgroundColor: #fff -->
+<!-- backgroundImage: url('https://marp.app/assets/hero-background.svg') -->
 
-Deploy on your kuberentes cluster the admission plugins `PodNodeSelector`.
+Configure your Kubernetes cluster with the admission plugin `PodNodeSelector`.
 
 Example with minikube:
 
 ```bash
-minikube start  --extra-config=apiserver.enable-admission-plugins=PodNodeSelector
+minikube start --extra-config=apiserver.enable-admission-plugins=PodNodeSelector
 ```
 
 ## Label nodes
